@@ -1,4 +1,4 @@
-local ver = "0.07"
+local ver = "0.08"
 
 
 if FileExist(COMMON_PATH.."MixLib.lua") then
@@ -154,9 +154,11 @@ OnTick(function (myHero)
 			CastTargetSpell(target, _R)
             end
 			
-			if OriannaMenu.Combo.E:Value() and Ready(_E) and ValidTarget(target, 825) then
-			 CastTargetSpell(myHero, _E)
-	    end	
+		if OriannaMenu.Combo.E:Value() then        
+	  if Ready(_E) and ValidTarget(target, 825) then
+		      CastTargetSpell(myHero, _E)
+	  end
+        end
 
           end
 
