@@ -1,4 +1,4 @@
-local ver = "0.09"
+local ver = "0.10"
 
 
 if FileExist(COMMON_PATH.."MixLib.lua") then
@@ -143,7 +143,7 @@ OnTick(function (myHero)
           	             
            	       
               
-		if OriannaMenu.Combo.Q:Value() and Ready(_Q) and ValidTarget(target, 800) then
+		if OriannaMenu.Combo.Q:Value() and Ready(_Q) and ValidTarget(target, 825) then
 		     if target ~= nil then 
                          CastTargetSpell(target, _Q)
                      end
@@ -155,7 +155,7 @@ OnTick(function (myHero)
             end
 			
 		if OriannaMenu.Combo.E:Value() then        
-	  if Ready(_E) and ValidTarget(target, 825) then
+	  if Ready(_E) and ValidTarget(myHero, 825) then
 		      CastTargetSpell(myHero, _E)
 	  end
         end
@@ -167,7 +167,7 @@ OnTick(function (myHero)
             end
 			
 		if OriannaMenu.Combo.E:Value() and KeyIsDown(32) then        
-	  if Ready(_E) and ValidTarget(target, 825) then
+	  if Ready(_E) then
 		      CastTargetSpell(myHero, _E)
 	  end
         end
