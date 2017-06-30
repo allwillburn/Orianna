@@ -155,7 +155,7 @@ OnTick(function (myHero)
             end
 			
 		if OriannaMenu.Combo.E:Value() then        
-	  if Ready(_E) and ValidTarget(myHero, 1200) then
+	  if Ready(_E) and ValidTarget(target, 1200) then
 		      CastTargetSpell(myHero, _E)
 	  end
         end
