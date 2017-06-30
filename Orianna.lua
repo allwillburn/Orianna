@@ -1,4 +1,4 @@
-local ver = "0.02"
+local ver = "0.03"
 
 
 if FileExist(COMMON_PATH.."MixLib.lua") then
@@ -143,7 +143,7 @@ OnTick(function (myHero)
           	  
 
 			if OriannaMenu.Combo.E:Value() and Ready(_E) and ValidTarget(target, 825) then
-			 CastSkillShot(_E, myHero)
+			 CastSkillShot(_E, myHero.pos)
 	    end
              
            	  
